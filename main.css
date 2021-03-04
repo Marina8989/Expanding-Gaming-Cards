@@ -11,7 +11,7 @@ body{
 }
 .container{
     display: flex;
-    height: 90vh;
+    width: 90vh;
     
 }
 .panel{
@@ -28,7 +28,19 @@ body{
     transition: flex 0.3s ease-in;
 }
 .panel h3{
-  position:absolute;
+  font-size: 23px;
+  position: absolute;
   bottom: 20px;
   left: 20px;
+  margin: 0;
+  opacity: 0;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px black;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
 }
